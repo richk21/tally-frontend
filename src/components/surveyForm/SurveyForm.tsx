@@ -6,7 +6,6 @@ import {
   AccordionDetails,
   Slider,
 } from '@mui/material';
-import Grid from '@mui/material/Grid2';
 import { Tooltip } from '@progress/kendo-react-tooltip';
 import { TextArea } from '@progress/kendo-react-inputs';
 import { Loader } from '@progress/kendo-react-indicators';
@@ -218,12 +217,11 @@ export const SurveyForm = () => {
           </Box>
 
           <form onSubmit={handleSubmit}>
-            <Grid
-              container
-              spacing={2}
+            <Box
+              sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
               className="form-grid"
-              direction={'column'}
             >
+              {/* User Info Accordion */}
               <Accordion
                 className={`survey-form-accordion ${
                   expandedPanel === 'userInfo' ? 'expanded' : ''
@@ -276,7 +274,10 @@ export const SurveyForm = () => {
                   {/* Name (optional) */}
                   <div className="accordion-container">
                     <div className="field-section-container">
-                      <Grid size={12} className="form-field name-field">
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field name-field"
+                      >
                         <InputField
                           inputFieldLabel="Name"
                           placeholder="Enter your name"
@@ -284,10 +285,12 @@ export const SurveyForm = () => {
                           onChange={(e) => setName(e.value)}
                           required={false}
                         />
-                      </Grid>
-
+                      </Box>
                       {/* Age */}
-                      <Grid size={12} className="form-field age-field">
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field age-field"
+                      >
                         <InputField
                           type="number"
                           placeholder="Enter your age"
@@ -296,10 +299,12 @@ export const SurveyForm = () => {
                           maxValue={150}
                           onChange={(e) => setAge(e.value)}
                         />
-                      </Grid>
-
+                      </Box>
                       {/* Occupation */}
-                      <Grid size={12} className="form-field occupation-field">
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field occupation-field"
+                      >
                         <Dropdown
                           alphabetic
                           name="Occupation"
@@ -309,13 +314,13 @@ export const SurveyForm = () => {
                           required
                           placeholder="Select Occupation"
                         />
-                      </Grid>
+                      </Box>
                     </div>
                   </div>
                 </AccordionDetails>
               </Accordion>
 
-              {/* Locality */}
+              {/* Locality Accordion */}
               <Accordion
                 className={`survey-form-accordion ${
                   expandedPanel === 'localityInfo' ? 'expanded' : ''
@@ -366,7 +371,10 @@ export const SurveyForm = () => {
                 <AccordionDetails>
                   <div className="accordion-container">
                     <div className="field-section-container">
-                      <Grid size={12} className="form-field state-field">
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field state-field"
+                      >
                         <Dropdown
                           alphabetic
                           name="State"
@@ -376,9 +384,11 @@ export const SurveyForm = () => {
                           required
                           placeholder="Select your state"
                         />
-                      </Grid>
-
-                      <Grid size={12} className="form-field city-field">
+                      </Box>
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field city-field"
+                      >
                         <Dropdown
                           alphabetic
                           name="City"
@@ -388,8 +398,11 @@ export const SurveyForm = () => {
                           required
                           placeholder="Select your city"
                         />
-                      </Grid>
-                      <Grid size={12} className="form-field area-field">
+                      </Box>
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field area-field"
+                      >
                         <Dropdown
                           alphabetic
                           name="Area"
@@ -399,8 +412,11 @@ export const SurveyForm = () => {
                           required
                           placeholder="Select your area"
                         />
-                      </Grid>
-                      <Grid size={12} className="form-field pincode-field">
+                      </Box>
+                      <Box
+                        sx={{ width: '100%' }}
+                        className="form-field pincode-field"
+                      >
                         <Dropdown
                           name="Pincode"
                           optionsList={pincodes}
@@ -411,13 +427,13 @@ export const SurveyForm = () => {
                           numeric
                           maxLength={6}
                         />
-                      </Grid>
+                      </Box>
                     </div>
                   </div>
                 </AccordionDetails>
               </Accordion>
 
-              {/* Ratings */}
+              {/* Ratings Accordion */}
               <Accordion
                 className={`survey-form-accordion ${
                   expandedPanel === 'ratings' ? 'expanded' : ''
@@ -505,7 +521,11 @@ export const SurveyForm = () => {
                           setter: setInternetQuality,
                         },
                       ].map((r) => (
-                        <Grid size={12} key={r.label} className="rating-field">
+                        <Box
+                          key={r.label}
+                          sx={{ width: '100%', marginBottom: '1rem' }}
+                          className="rating-field"
+                        >
                           <div>{r.label}</div>
                           <Slider
                             value={r.value || 0}
@@ -521,14 +541,14 @@ export const SurveyForm = () => {
                               width: '80%',
                             }}
                           />
-                        </Grid>
+                        </Box>
                       ))}
                     </div>
                   </div>
                 </AccordionDetails>
               </Accordion>
 
-              {/* Amenities Awareness */}
+              {/* Amenities Accordion */}
               <Accordion
                 className={`survey-form-accordion ${
                   expandedPanel === 'amenities' ? 'expanded' : ''
@@ -611,9 +631,9 @@ export const SurveyForm = () => {
                           setter: setSchoolsAmenity,
                         },
                       ].map((a) => (
-                        <Grid
-                          size={12}
+                        <Box
                           key={a.label}
+                          sx={{ width: '100%', marginBottom: '1rem' }}
                           className="amenity-rating-field"
                         >
                           <div>{a.label}</div>
@@ -631,14 +651,14 @@ export const SurveyForm = () => {
                               width: '80%',
                             }}
                           />
-                        </Grid>
+                        </Box>
                       ))}
                     </div>
                   </div>
                 </AccordionDetails>
               </Accordion>
 
-              {/* comments */}
+              {/* Comments Accordion */}
               <Accordion
                 className={`survey-form-accordion ${
                   expandedPanel === 'comments' ? 'expanded' : ''
@@ -688,7 +708,7 @@ export const SurveyForm = () => {
                 <AccordionDetails>
                   <div className="accordion-container">
                     <div className="field-section-container">
-                      <Grid size={12} className="comments-field">
+                      <Box sx={{ width: '100%' }} className="comments-field">
                         <div>
                           Please share a few words about your locality..
                         </div>
@@ -699,17 +719,17 @@ export const SurveyForm = () => {
                           onChange={(e) => setComments(e.value)}
                           required={false}
                         />
-                      </Grid>
+                      </Box>
                     </div>
                   </div>
                 </AccordionDetails>
               </Accordion>
 
-              {/* Submit */}
-              <Grid size={12} className="submit-btn">
+              {/* Submit Button */}
+              <Box sx={{ width: '100%' }} className="submit-btn">
                 <ButtonComponent isDisabled={!isFormValid} text="Submit" />
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </form>
           {notification && (
             <div className="notifications-container">
