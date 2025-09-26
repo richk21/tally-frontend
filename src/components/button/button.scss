@@ -1,0 +1,33 @@
+@import '../../utils/variables.scss';
+
+.button-container {
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+
+    .k-button {
+      background: #2f123d;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 15px;
+      padding: 12px 34px;
+      box-shadow: 0 1px 6px rgb(47 18 61 / 9%);
+      border: 1px solid #2f123d;
+      transition: background 0.18s, box-shadow 0.18s;
+
+      &:hover,
+      &:focus {
+        background: #1a0923;
+        box-shadow: 0 3px 12px rgb(47 18 61 / 11%);
+      }
+
+      &:disabled {
+        background: #f1f1f1;
+        color: #aaa;
+        cursor: not-allowed;
+        border: 1px solid #ececec;
+        box-shadow: none;
+      }
+    }
+}

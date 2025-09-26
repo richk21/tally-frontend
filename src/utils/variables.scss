@@ -1,0 +1,57 @@
+$color-primary: #000;
+$color-secondary: #222;
+$color-accent: #666;
+$color-background: #fff;
+$color-surface: #f9f9f9;
+$color-border: #e0e0e0;
+$color-black: #000;
+$color-white: #fff;
+
+$color-header: #000;
+$color-header-text: #fff;
+$color-text: #111;
+$color-muted: #777;
+
+$color-grey: #999;
+$color-light-grey: #ccc;
+$color-dark-grey: #444;
+$color-purple-hover: #bbb;
+
+$red: #d32f2f;
+$active-purple: #9c60a7;
+
+$background-color: $color-background;
+$background-gradient: linear-gradient(135deg, $color-primary, $color-secondary);
+$background-alt: linear-gradient(160deg, $color-primary, $color-accent);
+
+$text-primary: $color-black;
+$text-secondary: $color-grey;
+$text-muted: $color-muted;
+$text-inverse: $color-white;
+$text-subtle-grey: $color-grey;
+
+$border-color: $color-border;
+$border-radius: 8px;
+$box-shadow: 0px 2px 8px rgb(0 0 0 / 5%);
+
+$font-family-base: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 20px;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit * 0.5;
+$spacing-sm: $spacing-unit;
+$spacing-md: $spacing-unit * 2;
+$spacing-lg: $spacing-unit * 3;
+$spacing-xl: $spacing-unit * 4;
+
+$transition-fast: 0.2s ease-in-out;
+$transition-medium: 0.35s ease-in-out;
+
+$glass-effect: rgb(255 255 255 / 5%);
+$blur-backdrop: blur(10px);

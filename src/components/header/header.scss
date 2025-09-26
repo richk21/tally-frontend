@@ -1,0 +1,75 @@
+@import '../../utils/variables.scss';
+
+.header-nav-bar {
+  background-color: #fff;
+  border-bottom: 1px solid $color-muted;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 700;
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand-name {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: black;
+      outline: none;
+    }
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 24px;
+
+    .nav-link {
+      border: none;
+      cursor: pointer;
+      font-family: sans-serif;
+      font-size: 15px;
+      font-weight: 100;
+      padding: 8px 15px;
+      text-transform: none;
+      color: $color-primary;
+      background: none;
+      align-items: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+      
+      &:hover,
+      &:focus {
+        transition: color 0.3s ease, background-color 0.3s ease;
+        color: $color-white;
+        background-color: $active-purple;
+        outline: none;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+
+      }
+
+      &.active {
+        color: $color-white;
+        background-color: $active-purple;
+        outline: none;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}

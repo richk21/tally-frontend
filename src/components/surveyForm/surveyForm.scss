@@ -1,0 +1,126 @@
+@import '../../utils/variables.scss';
+
+.survey-form {
+  background: #fff;
+  width: 100%;
+  max-width: 800px;
+  min-width: 340px;
+  margin: 48px auto 0;
+  padding: 14px 0 32px;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: $font-family-base;
+  font-size: 1.08rem;
+
+  .form-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #18181b;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  .form-sub-title {
+    color: #71717a;
+    font-size: 1.13rem;
+    font-weight: 400;
+    margin-bottom: 36px;
+    text-align: center;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-grid {
+    width: 100%;
+    padding: 0 14px;
+    gap: 18px;
+  }
+
+  .survey-form-accordion {
+    border-radius: 12px;
+    border: 1px solid #ececec;
+    margin-bottom: 14px;
+    box-shadow: none;
+    background: #fff;
+    transition: border 0.13s;
+
+    .accordion-header{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+
+      .accordion-header-title{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .accordion-container{
+      .field-section-container{
+        .ratings-slider{
+          color: #2f123d;
+        }
+      }
+    }
+
+    &.expanded {
+      border-color: #2f123d;
+      background: #fafafa;
+    }
+
+    .MuiAccordionSummary-root {
+      background: transparent;
+      color: #18181b;
+      font-size: 1.05rem;
+      padding: 10px 18px;
+      border-radius: 12px;
+      box-shadow: none;
+
+      &:hover {
+        background: #fafaff;
+      }
+    }
+
+    .expand-icon {
+      width: 21px;
+      height: 21px;
+      filter: invert(0.15) grayscale(1);
+    }
+
+    .MuiAccordionDetails-root {
+      padding: 14px 18px 16px;
+      background: #fff;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      color: #222;
+    }
+  }
+
+  .submit-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .notifications-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comments-text-area{
+    font-size: 15px;
+    border: 1px solid  #2f123d;
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    width: 90%;
+  }
+}
+
+.loader-container{
+  height: 80vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

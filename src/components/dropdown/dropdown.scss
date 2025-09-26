@@ -1,0 +1,87 @@
+@import '../../utils/variables.scss';
+
+.dropdown-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1;
+  
+  .k-label{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: $color-secondary;
+    
+    .required {
+      color: $red;
+      margin-left: 3px;
+    }
+  }
+
+  .k-autocomplete{
+    margin: 10px 0 0;
+    border: none;
+
+    .k-input-inner{
+        padding: 10px 0 10px 5px;
+        margin: 0;
+        border: 1px solid lighten($color-primary, 15%);
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+        font-size: 0.95rem;
+        width: 100%;
+
+         &:hover {
+            border-color: $color-purple-hover;
+            }
+
+        &:focus {
+            border: 1px solid $color-primary;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+        }
+
+        &:disabled {
+            background-color: #f5f5f5;
+            border-color: #ddd;
+            color: #888;
+            cursor: not-allowed;
+        }
+    }
+}
+}
+
+.k-animation-container{
+    background-color: $color-white;
+    border-radius: 5px;
+    font-family: $font-family-base;
+    box-shadow: 2px 2px 6px $color-light-grey;
+
+    .k-list-ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .k-list-item{
+            margin: 0;
+            padding: 10px;
+
+            &:hover{
+                background-color: $color-purple-hover;
+                cursor: pointer;
+            }
+
+            &:focus{
+              background-color: $color-purple-hover;
+            }
+        }
+    }
+}
+
+.k-clear-value {
+  display: none;
+
+  svg {
+    display: none;
+  }
+}

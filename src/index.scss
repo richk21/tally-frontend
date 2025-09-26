@@ -1,0 +1,9 @@
+@import './utils/variables.scss';
+@import '@progress/kendo-theme-default/dist/all.css';
+
+body {
+  color: $text-primary;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}

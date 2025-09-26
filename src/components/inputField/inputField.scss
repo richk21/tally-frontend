@@ -1,0 +1,47 @@
+@import '../../utils/variables.scss';
+
+.input-field-container {
+  display: flex;
+  flex-direction: column;
+   margin-bottom: 16px;
+
+  
+  .k-label{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: $color-secondary;
+    margin: 0 0 10px;
+
+    .required{
+      color: $red;
+    }
+
+  }
+
+  .kendo-input-field {
+    padding: 10px 12px;
+    margin: 0;
+    border: 1px solid lighten($color-primary, 15%);
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.95rem;
+
+    &:hover {
+      border-color: $color-purple-hover;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.2); // focus ring
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      color: #888;
+      cursor: not-allowed;
+    }
+  }
+}
