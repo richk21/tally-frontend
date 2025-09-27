@@ -2,14 +2,17 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './header.scss';
 import Logo from '../../assets/images/tally-logo.png';
 import { Box } from '@mui/material';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
-import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import {
+  homeIcon,
+  pageFooterSectionIcon,
+  dashboardOutlineIcon,
+} from '@progress/kendo-svg-icons';
+import { SvgIcon } from '@progress/kendo-react-common';
 
 const pages = [
-  { label: 'Landing Page', icon: <HomeOutlinedIcon />, path: '/' },
-  { label: 'Survey Form', icon: <AssignmentOutlinedIcon />, path: '/survey' },
-  { label: 'Dashboard', icon: <DashboardOutlinedIcon />, path: '/dashboard' },
+  { label: 'Landing Page', icon: homeIcon, path: '/' },
+  { label: 'Survey Form', icon: pageFooterSectionIcon, path: '/survey' },
+  { label: 'Dashboard', icon: dashboardOutlineIcon, path: '/dashboard' },
 ];
 
 export const Header = () => {
@@ -38,12 +41,19 @@ export const Header = () => {
             const active = location.pathname === path;
             return (
               <button
-                key={icon.key}
+                key={icon.name}
                 className={`nav-link${active ? ' active' : ''}`}
                 onClick={() => navigate(path)}
                 aria-current={active ? 'page' : undefined}
               >
-                {icon}
+                <SvgIcon
+                  icon={icon}
+                  size="large"
+                  height={23}
+                  width={23}
+                  fontWeight="bold"
+                />
+                {/* {icon} */}
               </button>
             );
           })}
