@@ -1,4 +1,4 @@
-# [Tally](https://tally-survey-app.netlify.app/)
+# Tally
 
 Tally is a user-friendly web platform for assessing localities based on community-driven rating-based surveys. It is built with React and TypeScript to create an interactive, modern dashboard and survey experience.
 
