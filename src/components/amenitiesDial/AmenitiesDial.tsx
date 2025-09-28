@@ -68,6 +68,7 @@ const DialChart = ({ name, value, max = 5, color, icon }: DialProps) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        flexWrap: 'wrap',
       }}
     >
       <div style={{ width: '100%', height: '100%', position: 'relative' }}>

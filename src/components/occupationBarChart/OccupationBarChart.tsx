@@ -1,4 +1,3 @@
-import React from 'react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, Tooltip } from 'recharts';
 import { Box } from '@mui/material';
 
@@ -7,9 +6,10 @@ interface OccupationBarChartProps {
   colors?: string[];
 }
 
-const OccupationBarChart: React.FC<OccupationBarChartProps> = ({ data }) => {
+export const OccupationBarChart = ({ data }: OccupationBarChartProps) => {
   return (
     <Box
+      className="occupation-bar-chart"
       sx={{
         backgroundColor: 'white',
         borderRadius: 2,
@@ -28,7 +28,12 @@ const OccupationBarChart: React.FC<OccupationBarChartProps> = ({ data }) => {
       >
         What do people do?
       </div>
-      <ResponsiveContainer width={500} height={250} style={{ padding: '10px' }}>
+      <ResponsiveContainer
+        className="bar-chart-container"
+        width={'90%'}
+        height={250}
+        style={{ padding: '10px' }}
+      >
         <BarChart data={data}>
           <XAxis dataKey="name" />
           <Tooltip />
@@ -38,5 +43,3 @@ const OccupationBarChart: React.FC<OccupationBarChartProps> = ({ data }) => {
     </Box>
   );
 };
-
-export default OccupationBarChart;

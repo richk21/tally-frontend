@@ -5,7 +5,7 @@ import { AmenitiesDial } from '../../components/amenitiesDial/AmenitiesDial';
 import './dashboardPage.scss';
 import { getData, getRatingsOverTime } from '../../api/SurveyApi';
 import { RatingsGaugeChart } from '../../components/ratingsGuageChart/RatingsGuageChart';
-import OccupationBarChart from '../../components/occupationBarChart/OccupationBarChart';
+import { OccupationBarChart } from '../../components/occupationBarChart/OccupationBarChart';
 import { AgePieChart } from '../../components/agePie/AgePie';
 import { RatingsLineChartWithToggle } from '../../components/ratingLineChart/RatingLineChart';
 import { InputAdornment, TextField } from '@mui/material';

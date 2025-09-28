@@ -4,3 +4,11 @@
         font-size: 18px;
     }
 }
+@media (max-width: 500px) {
+    .amenities-dial-charts-container{
+        align-items: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

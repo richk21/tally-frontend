@@ -1,11 +1,13 @@
 
 .search-dashboard-container{
   background-color: #f4f6fa;
-
   .dashboard-container {
     display: grid;
     grid-template:
-      "cards cards cards-col" auto "bar-pie com cards-col" 1.2fr "line-c line-c line-c" auto / 2fr 2fr 250px;
+      "cards cards cards-col"
+      "bar-pie com cards-col"
+      "line-c line-c line-c";
+      grid-template-columns: 2fr 2fr 250px;
     gap: 24px;
     padding: 24px;
     font-family: Montserrat, sans-serif;
@@ -19,8 +21,9 @@
       box-shadow: 0 2px 8px rgb(44 43 94 / 6%);
       border-radius: 12px;
       padding: 16px 12px;
-      flex: 1 0 0;
-      min-width: 100px;
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: 100%;
       flex-direction: column;
       justify-content: space-around;
     }
@@ -34,8 +37,9 @@
       box-shadow: 0 2px 8px rgb(44 43 94 / 6%);
       border-radius: 12px;
       padding: 16px 12px;
-      flex: 1 0 0;
+      flex: 1 1 auto;
       min-width: 0;
+      max-width: 100%;
       flex-direction: column;
       justify-content: space-around;
     }
@@ -49,7 +53,8 @@
       box-shadow: 0 2px 8px rgb(44 43 94 / 6%);
       border-radius: 12px;
       padding: 20px;
-      flex: 1 0 0;
+      flex: 1 1 auto;
+      max-width: 100%;
       min-width: 0;
       flex-direction: column;
       justify-content: space-around;
@@ -89,12 +94,22 @@
       padding: 12px;
       gap: 16px;
     }
-  
-    @media (width <= 400px) {
-      padding: 8px;
-      gap: 12px;
-      font-size: 14px;
+
+    @media (max-width: 768px) {
+      .summary-cards-row, 
+      .summary-cards-col, 
+      .rating-line , 
+      .comments-section, 
+      .age-pie-occ-bar
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+      }
+      .occupation-bar-chart{
+        width: 100%;
+      }
     }
-  
   }
 }
