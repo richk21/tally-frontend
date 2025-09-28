@@ -44,7 +44,7 @@ yarn
 ### Environment Variables
 
 - Create a .env file in the root directory `tally-frontend`
-- add `REACT_APP_API_BASE_URL=<YOUR LOCAL BACKEND URL>` there
+- add `REACT_APP_API_BASE_URL=<YOUR LOCAL BACKEND URL>`
 
 ### How to run
 
